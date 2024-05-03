@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <main>
-      Space Portfolio
+    <main className="h-full w-full">
+      <div className="flex flex-col gap-20">
+
+      </div>
     </main>
   );
 }
