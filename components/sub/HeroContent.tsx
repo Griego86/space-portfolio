@@ -2,8 +2,9 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { slideInFromLeft, slideInFromTop } from '@/utils/motion'
+import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import { SparklesIcon } from '@heroicons/react/16/solid'
+import Image from 'next/image'
 
 const HeroContent = () => {
   return (
@@ -36,7 +37,25 @@ const HeroContent = () => {
         >
           I&apos;m a fullstack web developer with experience in website, mobile, and software development. Check out my projects and skills.
         </motion.p>
+        <motion.a
+          variants={slideInFromLeft(1)}
+          className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]'
+        >
+          Learn More!
+        </motion.a>
       </div>
+
+      <motion.div
+        variants={slideInFromRight(0.8)}
+        className='w-full h-full flex justify-center items-center'
+      >
+        <Image 
+          src='/mainIconsdark.svg'
+          alt='work icons'
+          height={650}
+          width={650}
+        />
+      </motion.div>
     </motion.div>
   )
 }
